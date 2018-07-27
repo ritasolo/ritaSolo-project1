@@ -18,18 +18,19 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 } 
 
 body {
-    background-color: #ededed;
+    /* background-color: #ededed; */
     font-family: 'Playfair Display', serif;
     font-weight: 400;
 }
 
 img {
     width: 100%;
-    display: block;
+    display: inline-block;
+    margin: 0;
 }
 
 p {
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
 }
 
@@ -41,37 +42,37 @@ p.pSmall {
 
 p, nav {
     font-family: 'Poppins', serif;
-    size: 14px;
+    size: 12px;
     font-weight: 400;
 }
 
 h1 {
     float: left;
     font-family: 'Playfair Display', serif;
-    font-size: 58px;
-    margin: 2% 5%;
+    font-size: 50px;
+    /* margin-right: 50px */
 }
 
 h2 {
-    font-size: 31.7px;
+    font-size: 45px;
     margin: 0;
 }
 
 h3 {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 h4 {
-    font-size: 36px;
+    font-size: 24px;
 }
 
 h5 {
-    font-size: 30px;
+    font-size: 18px;
     margin: 10px 0;
 }
 
 h6 {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -90,7 +91,7 @@ nav ul {
 }
 
 nav i {
-    margin-top: 6.5%;
+    margin-top: 75px;
 }
 
 li {
@@ -101,10 +102,12 @@ li {
 nav ul li, i {
     float: left;
     text-transform: uppercase;
-    margin-top: 6%;
-    margin-right: 2%;
-    margin-left: 1%;
-    word-spacing: 2%;
+    margin: 70px 0;
+    margin-right: 50px;
+}
+
+nav ul li:first-of-type {
+    margin-left: 50px;
 }
 
 hr {
@@ -118,7 +121,7 @@ strong {
 }
 
 p.headings {
-    font-size: 18px;
+    font-size: 14px;
     text-transform: uppercase;
 }
 
@@ -139,20 +142,12 @@ em {
 }
 
 header {
-    background-position: 50% 50%;
-    background-size: cover;
+   padding: 0;
+   clear: both;
 }
 
 .main {
     background-color: #ccc;
-}
-
-.blogWrapper {
-    width: 66%;
-    background-color: white;
-    margin: 0 auto;
-    position: relative;
-    top: -100px;
 }
 
 .icon {
@@ -406,6 +401,66 @@ input {
     font-size: 14px;
     display: block;
 }
+
+/* Blog CSS */
+
+.blogWrapper {
+    width: 847px;
+    background-color: white;
+    padding: 20px 0;
+    margin: 0 auto;
+    position: relative;
+}
+
+.blogWrapper h3 {
+    text-align: center;
+}
+
+.blogWrapper {
+    margin: 0 auto;
+    position: relative;
+    top: -100px;
+}
+
+.blogWrapper a {
+    color: #999999;
+}
+
+.blogWrapper {
+    text-align: center;
+}
+
+.blogWrapper img:first-of-type {
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+}
+
+article {
+    text-align: left;
+}
+
+.articleInfo {
+    float: left;
+    line-height: 10px;
+    width: 100px;
+    border: 1px solid red;
+}
+
+article h6 {
+    margin: 10px 0;
+}
+
+.articleInfo1 {
+    width: 480px;
+}
+
+.blogWrapper p:nth-of-type(1) {
+    clear: both;
+}
+
+
+
 
 
 
