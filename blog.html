@@ -123,12 +123,14 @@
             </div>
         </section>
         <section class="leaveComment clearfix">
-            <form action="">
-                <label for="name" class="visuallyhidden">Name</label>
+            <h5>Leave a Comment</h5>
+            <hr>
+            <form action="" id="commentForm">
+                <label for="name" id="subject" class="visuallyhidden">Name</label>
                 <input id="name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required>
-                <label for="email" class="visuallyhidden">Email</label>
+                <label for="email" id="subject"class="visuallyhidden">Email</label>
                 <input id="email" name="email" type="email" placeholder="youremail@domain.com" required>
-                <label for="subject" class="visuallyhidden">Subject</label>
+                <label for="subject" id="subject" class="visuallyhidden">Subject</label>
                 <input id="subject" name="subject" type="text" placeholder="Subject (Optional)">
                 <label for="comments" class="visuallyhidden">Comments</label>
                 <textarea id="comments" name="comments" placeholder="Here goes your comment"></textarea>

@@ -86,7 +86,7 @@ nav {
 }
 
 nav ul {
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -150,7 +150,7 @@ em {
 }
 
 .wrapper {
-    width: 63%;
+    width: 65%;
     margin: 0 auto;
 }
 
@@ -162,13 +162,6 @@ header {
 
 .main {
     background-color: #ccc;
-}
-
-.icon {
-    float: left;
-    font-size: 26px;
-    height: 180px;
-    margin-right: 10px;
 }
 
 .fa-plane {
@@ -222,9 +215,56 @@ header {
     width: 100%;
 }
 
+.icon {
+    float: left;
+    font-size: 26px;
+    height: 180px;
+    width: 40px;
+    margin-right: 0px;
+}
+
 .aboutInfo {
     width: 65%;
-    margin-left: 140px;
+    margin-left: 100px;
+}
+
+.aboutHeader {
+    position: relative;
+}
+
+.aboutHeader::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '';
+    font-size: 30px;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: -35px;
+}
+
+.aboutHeader1::before {
+    content: '\f185';
+}
+
+.aboutHeader2::before {
+    content: '\f072';
+}
+
+.aboutHeader3::before {
+    content: '\f06c';
+}
+
+.aboutHeader4::before {
+    content: '\f2e7';
+}
+
+.aboutHeader5::before {
+    content: '\f000';
+}
+
+.aboutHeader6::before {
+    content: '\f0f3';
 }
 
 .aboutInfo li {
@@ -232,13 +272,13 @@ header {
 }
 
 .aboutLeft {
-    width: 325px;
+    width: 300px;
     float: left;
     margin-top: 100px;
 }
 
 .aboutRight {
-    width: 325px;
+    width: 300px;
     float: left;
     margin-top: 100px;
 }
@@ -410,9 +450,9 @@ input {
     border-bottom: 1px solid #999999;
     margin-top: 10px;
     padding: 5px 0;
-    color: #ccc;
+    color: #999;
     font-family: "Poppins", sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     display: block;
 }
 
@@ -478,14 +518,14 @@ article h6 {
     font-weight: 600;
 }
 
-.blogWrapper hr {
+.blogBody hr {
     clear: both;
     width: 100%;
     margin: 30px 0;
     display: block;
     height: 0.5px;
     border: 0;
-    border-top: 1px solid #999;
+    border-top: 1px solid #c0c0c0;
     padding: 0; 
 }
 
@@ -600,17 +640,43 @@ article i:hover {
 .blogWrapper input, textarea {
     background-color: white;
     border-bottom: 1px solid #ddd;
-    width: 30%;
+    width: 276px;
     float: left;
 }
 
-#comments {
-    clear: both
-    width: 100%;
+#name, #email {
+    margin-right: 25px;
 }
 
-.blogWrapper button {
-    border: 1px solid red;
+.leaveComment {
+    text-align: left;
+}
+
+.leaveComment h5 {
+    color: black;
+}
+
+#comments {
+    clear: both;
+    font-family: 'Poppins', sans-serif;
+    color: #999;
+    font-size: 13px;
+    border: none;
+    overflow: auto;
+    outline: none;
+    resize: none;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    height: 170px;
+    margin: 30px 0;
+}
+
+#submit {
+    background-color: #84a016;
+    clear: both;
+    color: white;
+    width: 300px;
+    height: 40px;
 }
 
 
