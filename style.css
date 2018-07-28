@@ -206,8 +206,8 @@ header {
 .circle {
     width: 252px;
     position: relative;
-    bottom: 150px;
-    left: -120px;
+    bottom: 130px;
+    left: -140px;
 }
 
 .about {
@@ -215,17 +215,12 @@ header {
     width: 100%;
 }
 
-.icon {
-    float: left;
-    font-size: 26px;
-    height: 180px;
-    width: 40px;
-    margin-right: 0px;
+.about p {
+    color: #999999;
 }
 
-.aboutInfo {
-    width: 65%;
-    margin-left: 100px;
+.about h6 {
+    margin: 0;
 }
 
 .aboutHeader {
@@ -240,7 +235,7 @@ header {
     float: left;
     position: absolute;
     top: 0;
-    left: -35px;
+    left: -40px;
 }
 
 .aboutHeader1::before {
@@ -267,14 +262,16 @@ header {
     content: '\f0f3';
 }
 
-.aboutInfo li {
-    height: 175px;
-}
-
 .aboutLeft {
     width: 300px;
     float: left;
     margin-top: 100px;
+    margin-left: 160px;
+}
+
+.aboutLeft p, .aboutRight p {
+    position: relative;
+    top: -15px;
 }
 
 .aboutRight {
@@ -285,7 +282,7 @@ header {
 
 .aboutImg {
     float: right;
-    width: 600px;
+    width: 500px;
 }
 
 .testimonials {
@@ -327,9 +324,6 @@ header {
     text-color: black;
 }
 
-.about p {
-    color: #999999;
-}
 
 .aboutIntroText {
     text-align: left;
