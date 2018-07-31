@@ -13,22 +13,18 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 
 <body class="blogBody">
-    <nav>
+    <nav class="headerNav clearfix">
         <div class="wrapper clearfix">
-             <div class="wrapper clearfix">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Reserve</a></li>
-            </ul>
-            <h1>Sunshine</h1>
-            <ul>        
-                <li><a href="#">Blog</a></li>
+                <h1>Sunshine</h1>          <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
                 <i class="fas fa-search"></i>
-                <i class="fas fa-shopping-basket"></i>
+                <i class="fas fa-shopping-bag"></i>
+                <div class="cartAmount">2</div>
             </ul>
-        </div>
         </div>
     </nav>
     <header class="blogHeader">
@@ -84,7 +80,7 @@
                     <div class="relatedInfo">
                         <p>June 24th, 2016</p>
                         <h6><a href="#">Five reasons to stay at the beautiful Sunshine Hotel</a></h6>
-                        <p><a href="">Continue <i class="fas fa-long-arrow-alt-right"></i></a></p>
+                        <a href="">Continue <i class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                 </div>
                 <div class="relatedPost relatedPost2">
@@ -94,7 +90,7 @@
                     <div class="relatedInfo">
                         <p>April 24th, 2016</p>
                         <h6><a href="#">Experience romantic space just have only at Sunshine hotel</a></h6>
-                        <p><a href="">Continue <i class="fas fa-long-arrow-alt-right"></i></a></p>
+                        <a href="">Continue <i class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                 </div>
                 <div class="relatedPost relatedPost3">
@@ -104,7 +100,7 @@
                     <div class="relatedInfo">
                         <p>May 08th, 2016</p>
                         <h6><a href="#">Discover activities interested in Sunshine Hotel</a></h6>
-                        <p><a href="">Continue <i class="fas fa-long-arrow-alt-right"></i></a></p>
+                        <a href="">Continue <i class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                 </div>
             </section>
@@ -117,8 +113,9 @@
                 </div>
                 <div class="fullComment speech-bubble">
                     <div class="comment">
-                        <p>Jenifer Loopz - <a href="">Reply</a></p>
-                        <p>Pretty excursion website pretty fun excursion website blogger design.</p>
+                        <p>Jenifer Loopz -</p> 
+                        <a href="">Reply</a>
+                        <p>Pretty excursion website pretty fun excursion website blogger design. Colorful excursion pretty organized travelblogger.</p>
                         <p class="tiny">July 17, 2015 at 15 hours ago</p>
                     </div>
                 </div>
@@ -127,7 +124,8 @@
                 </div>
                 <div class="fullComment speech-bubble">
                     <div class="comment">
-                        <p>Daniel Vandaft - <a href="">Reply</a></p>
+                        <p>Daniel Vandaft - </p> 
+                        <a href="">Reply</a>
                         <p>Pretty excursion website pretty fun excursion website blogger design.</p>
                         <p class="tiny">July 17, 2015 at 15 hours ago</p>
                     </div>
@@ -136,65 +134,69 @@
             <section class="leaveComment clearfix">
                 <h5>Leave a Comment</h5>
                 <hr>
-                <form action="" id="commentForm">
+                <form action="POST" name="leaveAComment" id="commentForm">
                     <label for="name" id="subject" class="visuallyhidden">Name</label>
-                    <input id="name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required>
+                    <input id="name" name="name" class="commentName" type="text" placeholder="Enter your name" autocomplete="name" required>
+                    
                     <label for="email" id="subject"class="visuallyhidden">Email</label>
-                    <input id="email" name="email" type="email" placeholder="youremail@domain.com" required>
+                    <input id="email" name="email" class="emailName" type="email" placeholder="youremail@domain.com" required>
+                    
                     <label for="subject" id="subject" class="visuallyhidden">Subject</label>
-                    <input id="subject" name="subject" type="text" placeholder="Subject (Optional)">
+                    <input id="subject" name="subject" class="subjectName" type="text" placeholder="Subject (Optional)">
+                    
                     <label for="comments" class="visuallyhidden">Comments</label>
-                    <textarea id="comments" name="comments" placeholder="Here goes your comment"></textarea>
-                    <input id="submit" type="submit" value="Send Messenger">
+                    <textarea id="comments" name="comments" class="commentText" placeholder="Here goes your comment"></textarea>
+                    
+                    <input id="submit" class="leaveAComment" type="submit" value="Send Messenger">
                 </form>
             </div>
         </section>
     </main>
     <footer>
-        <div class="wrapper">
-            <div class="topFooter clearfix">
-                <div class="linksLeft">
-                    <p>
-                        <a href="">Site Map</a>
-                    </p>
-                    <p>
-                        <a href="">Terms & Conditions</a>
-                    </p>
-                    <p>
-                        <a href="">Privacy Policy</a>
-                    </p>
-                    <p>
-                        <a href="">Help</a>
-                    </p>
-                    <p>
-                        <a href="">Affiliate</a>
-                    </p>
-                </div>
-                <div class="linksRight">
-                    <p>
-                        <a href="">FAQs</a>
-                    </p>
-                    <p>
-                        <a href="">Blog</a>
-                    </p>
-                    <p>
-                        <a href="">Location</a>
-                    </p>
-                    <p>
-                        <a href="">Press</a>
-                    </p>
-                </div>
-                <div class="newsletter clearfix">
-                    <p>Sign up to get our newsletter.</p>
-                    <i class="far fa-paper-plane"></i>
-                    <input type="email" id="newsletter" placeholder="Your email... ">
+            <div class="topFooter">
+                <div class="wrapper clearfix">
+                    <nav class="footerNav clearfix">
+                        <ul>
+                            <li><a href="#">Site Map</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Affiliate</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Location</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>    
+                    </nav> 
+                    <div class="newsletter clearfix">
+                        <p>Sign up to get our newsletter.</p>
+                        <input type="email" id="newsletter" class="newsletterInput" placeholder="Your email... ">
+                    </div>
                 </div>
             </div>
             <div class="bottomFooter clearfix">
-                <p>&copy; 2018 Sunshine Hotel</p>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-facebook-f"></i>
+                <div class="wrapper">
+                    <p>&copy; 2018 Sunshine Hotel</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>

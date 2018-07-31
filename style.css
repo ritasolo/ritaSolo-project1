@@ -39,7 +39,7 @@ h1 {
     float: left;
     font-family: 'Playfair Display', sans-serif;
     font-size: 4.5rem;
-    margin: 0 80px;
+    margin: 0 150px;
 }
 
 h2 {
@@ -59,7 +59,7 @@ h4 {
 }
 
 h5 {
-    font-weight: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 25px;
     margin: 10px 0;
 }
@@ -67,6 +67,7 @@ h5 {
 h6 {
     font-size: 16px;
     font-weight: 400;
+    font-family: "Playfair Display", serif;
 }
 
 a {
@@ -74,18 +75,14 @@ a {
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: 'Poppins', sans-serif;
-}
-
-p.headings {
-    font-size: 14px;
-    text-transform: uppercase;
 }
 
 p, li {
     font-size: 12px;
     margin: 0;
+    list-style: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
@@ -94,9 +91,13 @@ p.pSmall {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 14px;
-    color: #999999;
+    color: #999;
     margin:0;
     margin-bottom: 20px;
+}
+
+p.darkGrey {
+    color: #666;
 }
 
 hr {
@@ -155,7 +156,7 @@ header {
 
 /* NAV STYLES */
 
-nav {
+.headerNav {
     background-color: #fff;
     height: 100%;
     padding-top: 25px;
@@ -163,41 +164,64 @@ nav {
     margin: 0;
 }
 
-nav li {
+.headerNav ul {
+    position: relative;
+}
+
+.cartAmount {
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    padding-top: 3px;
+    border-radius: 50%;
+    color: black;
+    font-size: 10px;
+    position: absolute;
+    background-color: #a4f1dc;
+    right: 17px;
+    bottom: -6px;
+}
+
+.headerNav ul li {
     font-weight: 700;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav li:nth-of-type(3) {
+.headerNav li:nth-of-type(3) {
     margin-right: 0;
 }
 
-nav a {
+.headerNav a {
     color: black;
 }
 
-nav a:hover {
+.headerNav a:hover {
     color: #999;
 }
 
-li {
+.headerNav i:hover {
+    color: #999;
+}
+
+.headerNav li {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
+.headerNav ul li {
     float: left;
     text-transform: uppercase;
-    margin-right: 41px;
+    margin-right: 28px;
     margin-top: 30px;
 }
 
-nav i {
+.headerNav i {
     margin-top: 32px;
-    margin-right: 41px;
+    font-size: 16px;
+    margin-right: 28px;
 }
 
 /* FORM STYLES */
@@ -229,7 +253,7 @@ form {
 
 /* blog form */
 
-#commentForm #name, #commentForm #email, #commentForm #subject {
+.emailName, .commentName, .subjectName {
     width: 275px;
     float: left;
     border: 0;
@@ -244,7 +268,7 @@ form {
     color: black;
 }
 
-#comments {
+.commentText {
     clear: both;
     margin-top: 0;
     font-family: 'Poppins', sans-serif;
@@ -260,7 +284,7 @@ form {
     margin: 30px 0;
 }
 
-#submit {
+.leaveAComment {
     background-color: #84a016;
     clear: both;
     color: white;
@@ -274,7 +298,7 @@ form {
 
 /* contact form */
 
- #contForm #name, #contForm #email, #contForm #subject {
+ .contactName, .contactEmail, .contactSubject {
     background-color: #white;
     border: 0;
     float: left;
@@ -288,7 +312,7 @@ form {
 }
 
 
-#messages {
+.contactMessages {
     clear: both;
     font-family: 'Poppins', sans-serif;
     color: #999;
@@ -303,42 +327,21 @@ form {
     margin: 30px 0;
 }
 
-#sendMessage {
+.contactSubmit {
     background-color:white;
     clear: both;
     font-family: 'Poppins', sans-serif;
-    color: black;
-    border: 0;
+    color:#000;
     font-weight: 700;
+    border: 0;
     letter-spacing: 0.5px;
     font-size: 12px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #999;
     width: 105px;
     padding: 10px 0;
     height: 35px;
     text-transform: uppercase;
     margin-top: 30px;
-}
-
-.contactForm {
-    clear: both;
-    padding-bottom: 80px;
-}
-
-.contactForm p {
-    padding-bottom: 80px;
-}
-
-.contactForm h3 {
-    padding-top: 40px;
-}
-
-.leaveComment {
-    text-align: left;
-}
-
-.leaveComment h5 {
-    color: black;
 }
 
 /* INDEX STYLES */
@@ -351,7 +354,6 @@ form {
     width: 800px;
     text-align: center;
 }
-
 
 .aboutIntro p:last-of-type {
     padding: 20px 0;
@@ -400,13 +402,39 @@ form {
     width: 100%;
 }
 
+.aboutImg {
+    float: left;
+    width: 37%;
+}
+
 .about p {
     color: #999999;
+    line-height: 25px;
 }
 
 .about h6 {
-    margin: 0;
+    margin: 10px 0;
     text-transform: uppercase;
+}
+
+.about li {
+    margin: 30px 0;
+}
+
+.aboutInfo {
+    float: left;
+    width: 63%;
+    padding: 2% 0;
+    height: 100%;
+}
+
+.aboutLeft, .aboutRight {
+    width: 35%;
+    float: left;
+}
+
+.aboutLeft {
+    margin-left: 200px;
 }
 
 .aboutHeader {
@@ -425,7 +453,7 @@ form {
     float: left;
     position: absolute;
     top: 0;
-    left: -40px;
+    left: -45px;
 }
 
 .aboutHeader1::before {
@@ -453,30 +481,12 @@ form {
     content: '\f0f3';
 }
 
-.aboutLeft {
-    width: 320px;
-    float: left;
-    margin-left: 200px;
-    margin-right: 20px;
-}
-
 .aboutLeft p, .aboutRight p {
     margin-top: 10px;
-    margin-bottom: 20px;
 }
 
 .aboutRight {
-    width: 320px;
     float: left;
-}
-
-.aboutLeft, .aboutRight {
-    margin-top: 150px;
-}
-
-.aboutImg {
-    float: right;
-    width: 37%;
 }
 
 /* testimonials section */
@@ -489,31 +499,39 @@ form {
     background-repeat: repeat;
 }
 
-.testArrow {
-    position: absolute;
-    font-size: 50px;
-    height: 30px;
-    width: 30px;
-}
-
-.testArrow i:hover {
-    color: grey;
-}
-
-.testLeftArrow {
-    left: 150px;
-    top: 360px;
-}
-
-.testRightArrow {
-    right: 150px;
-    top: 360px;
-}
 
 .testimonials {
     text-align: center;
     padding: 60px;
+    position: relative;
 } 
+
+.fa-chevron-left {
+    position: absolute;
+    top: 45%;
+    left: -7%;
+    font-size: 25px;
+}
+
+.fa-chevron-right {
+    position: absolute;
+    top: 45%;
+    right: -7%;
+    font-size: 25px;
+}
+
+.fa-chevron-left path, .fa-chevron-right path {
+    stroke: none;
+    fill: #000;
+}
+
+.fa-chevron-left path:hover, .fa-chevron-right path:hover {
+    fill: #999;
+}
+
+.testimonials i {
+    margin: 10px;
+}
 
 .testimonials.wrapper {
     background-color: white;
@@ -536,16 +554,25 @@ form {
 .testimonials p:last-of-type {
     clear: both;
     padding: 30px 0;
+    color: #999;
 }
 
 .testimonials a {
-    color: #ddd;
+    color: #000;
+}
+
+.testimonials a:hover {
+    color: #999;
 }
 
 .testimonials .fa-star {
     color: #DEAE41;
     margin: -0.5px;
     font-size: 16px;
+}
+
+.testimonials .fa-star path:hover {
+    fill: #DEAE41;
 }
 
 /* gallery section */
@@ -596,7 +623,7 @@ form {
     display: block;
     height: 0.5px;
     border: 0;
-    border-top: 1px solid #c0c0c0;
+    border-top: 1px solid #d5d5d5;
     padding: 0; 
 }
 
@@ -629,7 +656,8 @@ article {
 
 .articleInfo {
     float: left;
-    margin: 40px 0;
+    margin-top: 40px;
+    margin-bottom: 20px;
     line-height: 10px;
     width: 160px;
 }
@@ -661,6 +689,7 @@ article p:last-of-type {
 article h6:last-of-type {
     float: left;
     margin-right: 15px;
+    font-family: "Playfair Display", serif;
 }
 
 article i {
@@ -687,7 +716,7 @@ article i:hover {
 }
 
 .related p {
-    color: #ddd;
+    color: #999;
 }
 
 .related a {
@@ -699,7 +728,7 @@ article i:hover {
     width: 273px;
     margin-right: 30px;
     float: left;
-    box-shadow: 0 4px 2px -2px #ddd;
+    box-shadow: 0 4px 2px -4px #999;
 }
 
 .relatedPost3 {
@@ -707,10 +736,10 @@ article i:hover {
 }
 
 .relatedPost:hover {
-    box-shadow: 0px 20px 50px #ddd;  
+    box-shadow: 0px 15px 20px -5px #888;  
 }
 
-.relatedPost:hover h6 {
+.relatedPost h6 > a:hover {
     text-decoration: underline;
 }
 
@@ -718,6 +747,17 @@ article i:hover {
     padding: 10px;
     border-left: 1px solid #f6f6f6;
     border-right: 1px solid #f6f6f6;
+}
+
+.relatedInfo h6 + a {
+    display: block;
+    margin: 5px 0;
+    color: #999;
+    font-weight: 700;
+}
+
+.relatedInfo h6 + a:hover {
+    color: black;
 }
 
 .related h6 {
@@ -736,16 +776,26 @@ article i:hover {
     margin-bottom: 20px;
 }
 
-.comments h5 {
-    margin-bottom: 15px;
+.leaveComment h5 {
+    margin-bottom: 20px;
 }
 
 .comment p {
-    margin: 10px 0;
+    line-height: 30px;
+}
+
+.comment a, .comment p:first-of-type  {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+}
+
+.comment a {
+    color: #33cccc;
+    font-size: 12px;
 }
 
 .fullComment {
-    padding: 10px;
+    padding: 20px;
     margin: 20px 0;
     width: 780px;
     float: left;
@@ -764,7 +814,7 @@ article i:hover {
 
 .speech-bubble {
 	position: relative;
-	background: #f6f6f6;
+	background: #ededed;
 	border-radius: .4em;
 }
 
@@ -775,24 +825,14 @@ article i:hover {
     top: 20%;
 	width: 0;
 	height: 0;
-	border: 17px solid transparent;
-	border-right-color: #f6f6f6;
-	border-left: 0;
-	border-bottom: 0;
-	margin-top: -8.5px;
-	margin-left: -17px;
+    border-bottom: solid 6px transparent;
+    border-top: solid 6px transparent;
+    border-left: solid 13px transparent;
+    border-right: solid 13px #ededed;
+    top: 10px;
+    left: -26px;
+	margin-top: 10px;
 }
-
-/* .speechBubble {
-   border-bottom: solid 6px transparent;
-   border-top: solid 6px transparent;
-   border-left: solid 13px transparent;
-   border-right: solid 13px #ededed;
-   position: absolute;
-   top: 10px;
-   left: -26px;
-   z-index: 3;
-} */
 
 /* CONTACT STYLES */
 
@@ -800,6 +840,12 @@ article i:hover {
 
 .contact  {
     clear:both;
+    background-color: white;
+}
+
+.contactMain {
+    width: 100%;
+    padding-top: 50px;
     background-color: white;
 }
 
@@ -815,9 +861,11 @@ article i:hover {
 }
 
 .contact p {
-    color: #8C8C8C;
-    margin: 5px 0;
-    color: #999;
+    color: #666;
+}
+
+.contactInfo h5, .contactInfo strong {
+    font-family: "Playfair Display", serif;
 }
 
 .contact h2 {
@@ -836,14 +884,8 @@ article i:hover {
 .contact p:last-of-type {
     font-weight: 700;
     margin: 0;
-    color: #999999;
+    color: #999;
     margin-top: 5px;
-}
-
-.contactMain {
-    width: 100%;
-    padding-top: 50px;
-    background-color: white;
 }
 
 /* contact details section */
@@ -874,7 +916,7 @@ article i:hover {
 
 .method {
     width: 300px;
-    padding-left: 30px;
+    padding-left: 20px;
     margin-right: 30px; 
     margin-top: 30px;
     float: left;
@@ -885,6 +927,24 @@ article i:hover {
     margin: 0;
     margin-top: 30px;
     border: 0;
+}
+
+.contactForm {
+    clear: both;
+    padding-bottom: 80px;
+}
+
+.contactForm p {
+    padding-bottom: 80px;
+    color: #999;
+}
+
+.contactForm h3 {
+    padding-top: 40px;
+}
+
+.leaveComment {
+    text-align: left;
 }
 
 /* FOOTER STYLES */
@@ -901,30 +961,66 @@ footer p {
     line-height: 24px;
 }
 
-footer a {
+.footerNav li a {
     font-family: 'Poppins', sans-serif;
     color: #999;
     padding: 0;
-    margin: 0;
+    margin: 5px 0;
+    display: block;
     font-size: 1.2rem
 }
 
-footer ul {
-    height: 100%;
+.footerNav li {
+    list-style: none;
 }
 
-.linksLeft, .linksRight {
+.footerNav {
     float: left;
-    width: 285px;
-    padding-bottom: 40px;
+    width: 53%;
+    margin-bottom: 30px;
+}
+
+.footerNav ul {
+    float: left;
+    width: 50%;
+    padding: 0;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.newsletter {
+    float: left;
+    width: 47%;
+}
+
+.newsletterInput {
+    background-color: #212020;
+    border: 0;
+    color: #ccc;
+    width: 100%;
+    border-bottom: 1px solid #999;
+    margin-top: 5px;
+    padding: 8px 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    background-image: url(images/paper-plane-regular.svg);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: 20px 20px;
 }
 
 .bottomFooter {
-    clear: left;
+    clear: both;
     padding: 20px 0;
     margin: 0;
     text-align: left;
+}
+
+.bottomFooter .wrapper {
     border-top: 1px solid #999;
+    padding-top: 30px;
 }
 
 .bottomFooter p {
@@ -932,36 +1028,18 @@ footer ul {
     color: #999;
 }
 
-.bottomFooter .fab {
+.bottomFooter .fa-instagram,
+.bottomFooter .fa-twitter,
+.bottomFooter .fa-facebook-f {
     float: right;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #fff;
     margin: 0;
-    margin-left: 50px;
+    margin-left: 40px;
 }
 
-.newsletter {
-    position: relative;
-}
-
-.newsletter i {
-    color: white;
-    font-size: 1.5rem;
-    position: absolute;
-    top: 40px;
-    right: 5px;
-    z-index: 10;
-}
-
-#newsletter {
-    background-color: #212020;
-    position: relative;
-    border: 0;
-    color: #666;
-    width: 385px;
-    border-bottom: 1px solid #999;
-    margin-top: 10px;
-    padding: 8px 0;
-    font-family: "Poppins", sans-serif;
-    font-size: 13px;
+.bottomFooter .fa-facebook-f:hover,
+.bottomFooter .fa-twitter:hover,
+.bottomFooter .fa-instagram:hover {
+    color: #999;
 }

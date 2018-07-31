@@ -13,19 +13,18 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 
 <body>
-    <nav>
-         <div class="wrapper clearfix">
+    <nav class="headerNav clearfix">
+        <div class="wrapper clearfix">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Reserve</a></li>
-            </ul>
-            <h1>Sunshine</h1>
-            <ul>        
+                <h1>Sunshine</h1>    
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
-                <i class="fas fa-search"></i>
-                <i class="fas fa-shopping-basket"></i>
+                <a href="#"><i class="fas fa-search"></i></a> 
+                <a href="#"><i class="fas fa-shopping-bag"></i></a> 
+                <div class="cartAmount">2</div>
             </ul>
         </div>
     </nav>
@@ -62,16 +61,20 @@
             <section class="contactForm">
                 <h3>Get in touch with us</h3>
                 <p>Traveling travelblogger traveling theme. Travel fun simple design, simple fun.</p>
-                <form action="" id="contForm">
+                <form action="POST" name="contactUs" id="contForm">
                     <label for="name" class="visuallyhidden">Name</label>
-                    <input id="name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required>
+                    <input id="name" class="contactName" name="name" type="text" placeholder="Enter your name" autocomplete="name" required>
+                   
                     <label for="email" class="visuallyhidden">Email</label>
-                    <input id="email" name="email" type="email" placeholder="youremail@domain.com" required>
+                    <input id="email" class="contactEmail" name="email" type="email" placeholder="youremail@domain.com" required>
+                   
                     <label for="subject" id="subject" class="visuallyhidden">Subject</label>
-                    <input id="subject" name="subject" type="text" placeholder="Subject (Optional)">
+                    <input id="subject" class="contactSubject" name="subject" type="text" placeholder="Subject (Optional)">
+                   
                     <label for="comments" class="visuallyhidden">Comments</label>
-                    <textarea id="messages" name="messages" placeholder="Here goes your message"></textarea>
-                    <input id="sendMessage" type="submit" value="Send Message">
+                    <textarea id="messages" class="contactMessages" name="messages" placeholder="Here goes your message"></textarea>
+                   
+                    <input id="sendMessage" class="contactSubmit" type="submit" value="Send Message">
                 </form>
             </section>
         </div>
@@ -79,34 +82,51 @@
             <img src="images/contact-2.jpeg" alt=""> 
         </div>
     </main>
-
     <footer>
-        <div class="wrapper">
-            <div class="topFooter clearfix">
-                <div class="linksLeft">
-                    <p> <a href="">Site Map</a></p>
-                    <p> <a href="">Terms & Conditions</a></p>
-                    <p> <a href="">Privacy Policy</a></p>
-                    <p> <a href="">Help</a></p>
-                    <p> <a href="">Affiliate</a></p>
-                </div>
-                <div class="linksRight">
-                    <p> <a href="">FAQs</a></p>
-                    <p> <a href="">Blog</a></p>
-                    <p> <a href="">Location</a></p>
-                    <p> <a href="">Press</a></p>
-                </div>
-                <div class="newsletter clearfix">
-                    <p>Sign up to get our newsletter.</p>
-                    <i class="far fa-paper-plane"></i>
-                    <input type="email" id="newsletter" placeholder="Your email... ">
+            <div class="topFooter">
+                <div class="wrapper clearfix">
+                    <nav class="footerNav clearfix">
+                        <ul>
+                            <li><a href="#">Site Map</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Affiliate</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Location</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>    
+                    </nav> 
+                    <div class="newsletter clearfix">
+                        <p>Sign up to get our newsletter.</p>
+                        <input type="email" id="newsletter" class="newsletterInput" placeholder="Your email... ">
+                    </div>
                 </div>
             </div>
             <div class="bottomFooter clearfix">
-                <p>&copy; 2018 Sunshine Hotel</p>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-facebook-f"></i>
+                <div class="wrapper">
+                    <p>&copy; 2018 Sunshine Hotel</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                    </ul>   
+                </div>
             </div>
         </div>
     </footer>
