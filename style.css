@@ -402,10 +402,6 @@ form {
     text-transform: uppercase;
 }
 
-.about li {
-    margin: 30px 0;
-}
-
 .about {
     background-color: white;
     width: 100%;
@@ -419,9 +415,7 @@ form {
 .aboutInfo {
     float: left;
     width: 63%;
-    padding: 2% 0;
-    height: 100%;
-    transform: translateY(10%);
+    transform: translateY(30%);
 }
 
 .aboutLeft, 
@@ -436,7 +430,7 @@ form {
 }
 
 .aboutLeft {
-    margin-left: 200px;
+    margin-left: 26%;
 }
 
 .aboutRight {
