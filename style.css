@@ -150,7 +150,6 @@ header {
 }
 
 /* NAV STYLES */
-
 .headerNav {
     background-color: #fff;
     height: 100%;
@@ -161,6 +160,45 @@ header {
 
 .headerNav ul {
     position: relative;
+}
+
+.headerNav ul li {
+    font-weight: 700;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    text-transform: uppercase;
+    margin-right: 28px;
+    margin-top: 30px;
+}
+
+.headerNav li:nth-of-type(3) {
+    margin-right: 0;
+}
+
+.headerNav a {
+    color: black;
+}
+
+.headerNav a:hover {
+    color: #999;
+}
+
+.headerNav i {
+    margin-top: 32px;
+    font-size: 16px;
+    margin-right: 28px;
+}
+
+.headerNav i:hover {
+    color: #999;
+}
+
+.headerNav li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .cartAmount {
@@ -182,52 +220,8 @@ header {
     top: -2px;
 }
 
-.headerNav ul li {
-    font-weight: 700;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.headerNav li:nth-of-type(3) {
-    margin-right: 0;
-}
-
-.headerNav a {
-    color: black;
-}
-
-.headerNav a:hover {
-    color: #999;
-}
-
-.headerNav i:hover {
-    color: #999;
-}
-
-.headerNav li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.headerNav ul li {
-    float: left;
-    text-transform: uppercase;
-    margin-right: 28px;
-    margin-top: 30px;
-}
-
-.headerNav i {
-    margin-top: 32px;
-    font-size: 16px;
-    margin-right: 28px;
-}
-
 /* FORM STYLES */
-
 /* global form */
-
 form {
     width: 100%;
 }
@@ -242,28 +236,27 @@ form {
     color: black;
 }
 
-#subject {
+.commentSubject {
     margin-right: 0;
 }
 
 .commentName, 
 .commentEmail,
 .contactName,
-.contactEmail
- {
+.contactEmail {
     margin-right: 27px;
 }
 
-
 /* blog form */
-
-.commentEmail, .commentName, .subjectName {
+.commentEmail, 
+.commentName, 
+.subjectName {
     width: 275px;
     float: left;
     border: 0;
     border-bottom: 1px solid #999;
     color: #999;
-    margin-top: 10px;
+    margin-top: 30px;
     padding: 8px 0;
     font-family: "Poppins", sans-serif;
     font-size: 12px;
@@ -302,8 +295,9 @@ form {
 }
 
 /* contact form */
-
- .contactName, .contactEmail, .contactSubject {
+ .contactName, 
+ .contactEmail, 
+ .contactSubject {
     background-color: white;
     border: 0;
     float: left;
@@ -315,7 +309,6 @@ form {
     font-family: "Poppins", sans-serif;
     font-size: 12px;
 }
-
 
 .contactMessages {
     clear: both;
@@ -350,9 +343,7 @@ form {
 }
 
 /* INDEX STYLES */
-
 /* about intro section */
-
 .aboutIntro {
     background-color: #ededed;
     margin: 0 auto;
@@ -401,17 +392,6 @@ form {
 }
 
 /* more about section */
-
-.about {
-    background-color: white;
-    width: 100%;
-}
-
-.aboutImg {
-    float: left;
-    width: 37%;
-}
-
 .about p {
     color: #999999;
     line-height: 25px;
@@ -426,6 +406,16 @@ form {
     margin: 30px 0;
 }
 
+.about {
+    background-color: white;
+    width: 100%;
+}
+
+.aboutImg {
+    float: left;
+    width: 37%;
+}
+
 .aboutInfo {
     float: left;
     width: 63%;
@@ -434,19 +424,28 @@ form {
     transform: translateY(10%);
 }
 
-.aboutLeft, .aboutRight {
+.aboutLeft, 
+.aboutRight {
     width: 35%;
     float: left;
+}
+
+.aboutLeft p, 
+.aboutRight p {
+    margin-top: 10px;
 }
 
 .aboutLeft {
     margin-left: 200px;
 }
 
+.aboutRight {
+    float: left;
+    margin-left: 10px;
+}
+
 .aboutHeader {
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
     color: black;
     position: relative;
 }
@@ -455,7 +454,7 @@ form {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: '';
-    font-size: 30px;
+    font-size: 3rem;
     float: left;
     position: absolute;
     top: 0;
@@ -487,22 +486,24 @@ form {
     content: '\f0f3';
 }
 
-.aboutLeft p, .aboutRight p {
-    margin-top: 10px;
-}
-
-.aboutRight {
-    float: left;
-}
-
 /* testimonials section */
-
 .testimonialsExplore {
     position: relative;
     text-align: center;
     padding: 140px 0;
     background-image: url("images/backgroundImage.png");
     background-repeat: repeat;
+}
+
+.testimonials i {
+    margin: 10px;
+}
+
+.testimonials h6 {
+    margin-top: 50px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 30px;
 }
 
 .testimonials {
@@ -528,24 +529,15 @@ form {
     font-size: 25px;
 }
 
-.fa-chevron-left path, .fa-chevron-right path {
+.fa-chevron-left path, 
+.fa-chevron-right path {
     stroke: none;
     fill: #000;
 }
 
-.fa-chevron-left path:hover, .fa-chevron-right path:hover {
+.fa-chevron-left path:hover, 
+.fa-chevron-right path:hover {
     fill: #999;
-}
-
-.testimonials i {
-    margin: 10px;
-}
-
-.testimonials h6 {
-    margin-top: 50px;
-    font-weight: 400;
-    font-style: italic;
-    line-height: 30px;
 }
 
 .rating {
@@ -580,7 +572,6 @@ form {
 }
 
 /* gallery section */
-
 .gallerySection {
     text-align: center;
     clear: both;
@@ -593,11 +584,14 @@ form {
     margin-right: 20px;
 }
 
-.img1, .img2, .img3 {
+.img1, 
+.img2, 
+.img3 {
     margin-bottom: 20px;
 }
 
-.img3, .img6 {
+.img3, 
+.img6 {
     margin: 0;
 }
 
@@ -653,15 +647,6 @@ form {
 }
 
 /* article section */
-
-article img:first-of-type {
-    width: 60px;
-    border-radius: 50%;
-    float: left;
-    margin-top: 30px;
-    margin-right: 10px;
-}
-
 article {
     text-align: left;
 }
@@ -686,6 +671,14 @@ article {
 .related {
     text-align: left;
     padding-top: 50px;
+}
+
+article img:first-of-type {
+    width: 60px;
+    border-radius: 50%;
+    float: left;
+    margin-top: 30px;
+    margin-right: 10px;
 }
 
 article > p {
@@ -717,7 +710,6 @@ article i:hover {
 }
 
 /* related posts section */
-
 .related {
     clear: both;
     width: 100%;
@@ -780,8 +772,8 @@ article i:hover {
 }
 
 /* comment section */
-
-.comments, .leaveComment {
+.comments, 
+.leaveComment {
     text-align: left;
     padding-top: 80px;
 }
@@ -798,7 +790,8 @@ article i:hover {
     line-height: 30px;
 }
 
-.comment a, .comment p:first-of-type  {
+.comment a, 
+.comment p:first-of-type  {
     display: inline-block;
     font-family: 'Poppins', sans-serif;
 }
@@ -857,9 +850,7 @@ article i:hover {
 }
 
 /* CONTACT STYLES */
-
 /* global */
-
 .contact  {
     clear:both;
     background-color: white;
@@ -886,7 +877,8 @@ article i:hover {
     color: #666;
 }
 
-.contactInfo h5, .contactInfo strong {
+.contactInfo h5, 
+.contactInfo strong {
     font-family: "Playfair Display", serif;
 }
 
@@ -911,7 +903,6 @@ article i:hover {
 }
 
 /* contact details section */
-
 .contactMain h3 {
     margin: 0;
     margin-bottom: 10px;
@@ -922,7 +913,6 @@ article i:hover {
 }
 
 /* contact methods section */
-
 .contactMethods {
     width: 100%;
 }
@@ -971,7 +961,6 @@ article i:hover {
 }
 
 /* FOOTER STYLES */
-
 footer {
     background-color: #212020;
     padding-top: 70px;
