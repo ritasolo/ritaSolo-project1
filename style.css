@@ -26,6 +26,7 @@ html {
 
 body {
     background-color: #ededed;
+    font-family: 'Playfair Display', sans-serif;
 }
 
 img {
@@ -37,50 +38,44 @@ img {
 
 h1 {
     float: left;
-    font-family: 'Playfair Display', sans-serif;
     font-size: 4.5rem;
-    margin: 0 150px;
+    margin: 0 140px;
 }
 
 h2 {
-    font-size: 3.7rem;
+    font-size: 4rem;
     margin: 15px 0;
-    font-family: 'Playfair Display', serif;
 }
 
 h3 {
-    font-size: 44px;
+    font-size: 3.8rem;
     line-height: 60px;
-    font-family: 'Playfair Display', serif;
 }
 
 h4 {
-    font-size: 24px;
+    font-size: 2.6rem;
 }
 
 h5 {
-    font-family: 'Playfair Display', serif;
-    font-size: 25px;
+    font-size: 2.4rem;
     margin: 10px 0;
 }
 
 h6 {
-    font-size: 16px;
-    font-weight: 400;
-    font-family: "Playfair Display", serif;
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 a {
     text-decoration: none;
 }
 
-p {
-    font-size: 1.1rem;
-    font-family: 'Poppins', sans-serif;
-}
-
 p, li {
-    font-size: 12px;
+    font-size: 1.2rem;
     margin: 0;
     list-style: none;
     font-family: 'Poppins', sans-serif;
@@ -175,11 +170,16 @@ header {
     padding-top: 3px;
     border-radius: 50%;
     color: black;
-    font-size: 10px;
     position: absolute;
     background-color: #a4f1dc;
-    right: 17px;
-    bottom: -6px;
+    right: 30px;
+    bottom: -8px;
+}
+
+.cartAmount p {
+    font-size: 10px;
+    position: relative;
+    top: -2px;
 }
 
 .headerNav ul li {
@@ -232,12 +232,12 @@ form {
     width: 100%;
 }
 
-#contForm input:focus, 
-#contForm textarea:focus,
-#commentForm #name:focus,
-#commentForm #email:focus,
-#commentForm #subject:focus,
-#commentForm textarea:focus {
+.contactForm input:focus, 
+.contactForm textarea:focus,
+.commentName:focus,
+.commentEmail:focus,
+.commentSubject:focus,
+.commentText:focus {
     border-bottom: 1px solid black;
     color: black;
 }
@@ -246,18 +246,23 @@ form {
     margin-right: 0;
 }
 
-#name, #email {
+.commentName, 
+.commentEmail,
+.contactName,
+.contactEmail
+ {
     margin-right: 27px;
 }
 
 
 /* blog form */
 
-.emailName, .commentName, .subjectName {
+.commentEmail, .commentName, .subjectName {
     width: 275px;
     float: left;
     border: 0;
     border-bottom: 1px solid #999;
+    color: #999;
     margin-top: 10px;
     padding: 8px 0;
     font-family: "Poppins", sans-serif;
@@ -288,9 +293,9 @@ form {
     background-color: #84a016;
     clear: both;
     color: white;
-    width: 150px;
+    width: 180px;
     border: 0;
-    height: 40px;
+    height: 45px;
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -299,7 +304,7 @@ form {
 /* contact form */
 
  .contactName, .contactEmail, .contactSubject {
-    background-color: #white;
+    background-color: white;
     border: 0;
     float: left;
     color: #999;
@@ -374,7 +379,7 @@ form {
 }
 
 .aboutIntroText {
-    width: 790px;
+    width: 800px;
     text-align: left;
     padding-top: 3px;
 }
@@ -391,8 +396,8 @@ form {
 .circle {
     width: 180px;
     position: relative;
-    bottom: 120px;
-    left: -100px;
+    bottom: 130px;
+    left: -95px;
 }
 
 /* more about section */
@@ -426,6 +431,7 @@ form {
     width: 63%;
     padding: 2% 0;
     height: 100%;
+    transform: translateY(10%);
 }
 
 .aboutLeft, .aboutRight {
@@ -499,11 +505,13 @@ form {
     background-repeat: repeat;
 }
 
-
 .testimonials {
     text-align: center;
-    padding: 60px;
+    padding: 70px;
     position: relative;
+    background-color: white;
+    width: 960px;
+    margin: 0 auto;
 } 
 
 .fa-chevron-left {
@@ -533,14 +541,10 @@ form {
     margin: 10px;
 }
 
-.testimonials.wrapper {
-    background-color: white;
-    width: 960px;
-    margin: 0 auto;
-}
-
 .testimonials h6 {
     margin-top: 50px;
+    font-weight: 400;
+    font-style: italic;
     line-height: 30px;
 }
 
@@ -611,6 +615,10 @@ form {
     text-align: center;
 }
 
+.blogBody h5 {
+    margin-bottom: 20px;
+}
+
 .blogBody h6 {
     margin: 6px 0;
     margin-bottom: 15px;
@@ -628,7 +636,11 @@ form {
 }
 
 .blogMain a {
-    color: #ddd;
+    color: #999;
+}
+
+.blogMain a:hover {
+    color: black;
 }
 
 .blogNav {
@@ -694,7 +706,7 @@ article h6:last-of-type {
 
 article i {
     font-size: 16px;
-    color: #999;
+    color: #d5d5d5;
     float: left;
     margin-top: 10px;
     margin-right: 15px;
@@ -728,7 +740,7 @@ article i:hover {
     width: 273px;
     margin-right: 30px;
     float: left;
-    box-shadow: 0 4px 2px -4px #999;
+    box-shadow: 0px 4px 2px -4px #999;
 }
 
 .relatedPost3 {
@@ -745,13 +757,15 @@ article i:hover {
 
 .relatedInfo {
     padding: 10px;
+    padding-top: 20px;
     border-left: 1px solid #f6f6f6;
     border-right: 1px solid #f6f6f6;
 }
 
 .relatedInfo h6 + a {
     display: block;
-    margin: 5px 0;
+    font-family: 'Poppins', sans-serif;
+    margin: 20px 0;
     color: #999;
     font-weight: 700;
 }
@@ -789,8 +803,18 @@ article i:hover {
     font-family: 'Poppins', sans-serif;
 }
 
+.comment a + p {
+    color: #666;
+}
+
+.tiny {
+    color: #999;
+    font-size: 1.1rem;
+}
+
 .comment a {
     color: #33cccc;
+    font-style: italic;
     font-size: 12px;
 }
 
@@ -814,21 +838,19 @@ article i:hover {
 
 .speech-bubble {
 	position: relative;
-	background: #ededed;
+	background: #f6f6f6;
 	border-radius: .4em;
 }
 
-.speech-bubble:after {
+.speech-bubble::after {
 	content: '';
 	position: absolute;
-	left: 0;
-    top: 20%;
 	width: 0;
 	height: 0;
     border-bottom: solid 6px transparent;
     border-top: solid 6px transparent;
     border-left: solid 13px transparent;
-    border-right: solid 13px #ededed;
+    border-right: solid 13px #f6f6f6;
     top: 10px;
     left: -26px;
 	margin-top: 10px;
@@ -919,6 +941,7 @@ article i:hover {
     padding-left: 20px;
     margin-right: 30px; 
     margin-top: 30px;
+    padding-bottom: 30px;
     float: left;
     border-right: 1px solid #ddd;
 }

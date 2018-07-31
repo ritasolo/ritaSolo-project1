@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,6 @@
 </head>
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Poppins:400,700" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="style.css">
-
 <body class="blogBody">
     <nav class="headerNav clearfix">
         <div class="wrapper clearfix">
@@ -21,9 +19,15 @@
                 <li><a href="#">Reserve</a></li>
                 <h1>Sunshine</h1>          <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
-                <i class="fas fa-search"></i>
-                <i class="fas fa-shopping-bag"></i>
-                <div class="cartAmount">2</div>
+                <a href="#">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="#">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+                <div class="cartAmount">
+                    <p>2</p>
+                </div>
             </ul>
         </div>
     </nav>
@@ -40,6 +44,7 @@
                         Sunshine hotel in top 5 best hotel from TripAdvisor magazine
                     </p>      
                 </div> 
+            <!-- featured article section -->
             <article>
                 <div class="authorImg"><img src="images/blog-2.jpeg" alt="Author's image"></div>
                 <div class="articleInfo articleInfo1">
@@ -59,17 +64,17 @@
                     <p>Hotel, magazine, top</p>
                 </div>
                 <hr>
-                <p class="black">Travelblogger colorful whimsical wanderlust simple travelblogger pretty excursion. Adventure WordPress wanderlust modern organized. Travelblogger colorful whimsical wanderlust simple travelblogger pretty excursion.</p>
-
-                <p>Travelblogger colorful whimsical wanderlust simple travelblogger pretty excursion. Adventure WordPress wanderlust modern organized. Travelblogger colorful whimsical wanderlust simple travelblogger pretty excursion.</p>
-
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, quasi quo consequatur minima fugit enim corrupti? Dolorum illum, nulla ipsum dolores perspiciatis esse reprehenderit ad eum corporis amet accusamus ea. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat facilis temporibus dolorem aut, maiores accusantium corporis quisquam quae vero pariatur perspiciatis repellendus necessitatibus porro mollitia blanditiis quod. Laboriosam, voluptates maiores.</p>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci obcaecati nesciunt veritatis quasi! Culpa officiis voluptate eos ducimus, autem molestias architecto illo cupiditate maxime quod dolor doloribus obcaecati sequi hic! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolor cum animi omnis accusamus amet delectus aperiam neque, facere maxime enim eos culpa impedit, fugit praesentium a aspernatur numquam maiores.</p>
-
-                <h6>Share:</h6> <i class="fab fa-twitter"></i><i class="fab fa-instagram"></i><i class="fab fa-facebook"></i><i class="fab fa-google"></i>
+                <p class="black">Design WordPress darn wanderlust design blogger simple simple wanderlust, webdesign fun design webdesign. Darn Travel expedition theme fun traveler clean design. Travel darn expedition colorful blogger expedition adventure excursion wanderlust.</p>
+                <p>Traveler adventure cute excursion organized blogger fun excursion. Wanderlust pretty design travelblogger travelblogger cute, theme pretty simple blogger darn. Traveling colorful travelblogger pretty travelblogger traveler, fun wanderlust organized modern. Cute Travel whimsical adventure, darn webdesign WordPress adventure clean traveling traveler pretty. Traveling whimsical expedition clean organized clean organized adventure, excursion wanderlust expedition theme. Wanderlust organized expedition design modern excursion fun.</p>
+                <p>Design WordPress darn wanderlust design blogger simple simple wanderlust, webdesign fun design webdesign. Darn Travel expedition theme fun traveler clean design. Travel darn expedition colorful blogger expedition adventure excursion wanderlust. Traveler adventure cute excursion organized blogger fun excursion. Wanderlust pretty design travelblogger travelblogger cute, theme pretty simple blogger darn. Traveling colorful travelblogger pretty travelblogger traveler, fun wanderlust organized modern.</p>
+                <p>Cute Travel whimsical adventure, darn webdesign WordPress adventure clean traveling traveler pretty. Traveling whimsical expedition clean organized clean organized adventure, excursion wanderlust expedition theme. Wanderlust organized expedition design modern excursion fun.</p>
+                <h6>Share:</h6> 
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
             </article>
-
+            <!-- related articles section -->
             <section class="related clearfix">
                 <h5>Related Posts</h5>
                 <hr>
@@ -104,7 +109,7 @@
                     </div>
                 </div>
             </section>
-
+            <!-- comments section -->
             <section class="comments clearfix">
                 <h5>02 Comments</h5>
                 <hr>
@@ -131,6 +136,7 @@
                     </div>
                 </div>
             </section>
+            <!-- comment form -->
             <section class="leaveComment clearfix">
                 <h5>Leave a Comment</h5>
                 <hr>
@@ -139,7 +145,7 @@
                     <input id="name" name="name" class="commentName" type="text" placeholder="Enter your name" autocomplete="name" required>
                     
                     <label for="email" id="subject"class="visuallyhidden">Email</label>
-                    <input id="email" name="email" class="emailName" type="email" placeholder="youremail@domain.com" required>
+                    <input id="email" name="email" class="commentEmail" type="email" placeholder="youremail@domain.com" required>
                     
                     <label for="subject" id="subject" class="visuallyhidden">Subject</label>
                     <input id="subject" name="subject" class="subjectName" type="text" placeholder="Subject (Optional)">
@@ -152,54 +158,41 @@
             </div>
         </section>
     </main>
+    <!-- FOOTER SECTION -->
     <footer>
-            <div class="topFooter">
-                <div class="wrapper clearfix">
-                    <nav class="footerNav clearfix">
-                        <ul>
-                            <li><a href="#">Site Map</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Affiliate</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Location</a></li>
-                            <li><a href="#">Press</a></li>
-                        </ul>    
-                    </nav> 
-                    <div class="newsletter clearfix">
-                        <p>Sign up to get our newsletter.</p>
-                        <input type="email" id="newsletter" class="newsletterInput" placeholder="Your email... ">
-                    </div>
+        <div class="topFooter">
+            <div class="wrapper clearfix">
+                <nav class="footerNav clearfix">
+                    <ul>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Affiliate</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Location</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </nav>
+                <div class="newsletter clearfix">
+                    <p>Sign up to get our newsletter.</p>
+                    <input type="email" id="newsletter" class="newsletterInput" placeholder="Your email... ">
                 </div>
             </div>
-            <div class="bottomFooter clearfix">
-                <div class="wrapper">
-                    <p>&copy; 2018 Sunshine Hotel</p>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+        </div>
+        <div class="bottomFooter clearfix">
+            <div class="wrapper">
+                <p>&copy; 2018 Sunshine Hotel</p>
+                <ul>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                </ul>
             </div>
         </div>
     </footer>
 </body>
-
 </html>
